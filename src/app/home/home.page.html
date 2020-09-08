@@ -1,11 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="dark">
-    <ion-title>
-      Ionic Cesium Example
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-title>
+        Ionic Cesium Example
+      </ion-title>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-item color="dark">
+        <ion-label>Follow</ion-label>
+        <ion-toggle [(ngModel)]="follow"></ion-toggle>
+      </ion-item>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div #cesiumViewer id="cesiumViewer"></div>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark" (click)="centerPosition()">
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
+
+<ion-footer [translucent]="true">
+  <ion-toolbar color="dark" class="ion-text-center">
+    <ion-buttons slot="start">
+      <span>
+        LAT<br>{{coords.latitude}}
+      </span>
+    </ion-buttons>
+
+    <ion-buttons style="display: flex; justify-content: space-around">
+      <span>
+        LON<br>{{coords.longitude}}
+      </span>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <span>
+        ALT<br>{{coords.altitude}}
+      </span>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
