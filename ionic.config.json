@@ -1,0 +1,7 @@
+{
+  "name": "ionic-cesium-template",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
