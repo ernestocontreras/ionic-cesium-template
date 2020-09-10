@@ -2,6 +2,9 @@
 
 This repository is a template for integrating [IonicFramework](https://ionicframework.com) and [CesiumJS](https://cesium.com/cesiumjs) using [Angular](https://angular.io/).
 
+<table><tr><td><img src="doc/images/1.jpg"></td><td><img src="doc/images/2.jpg"></td></tr></table>
+
+
 ## Features
   - Cesium Viewer display
   - Geolocation integration
